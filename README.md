@@ -23,7 +23,6 @@ Things you may want to cover:
 
 * ...
 
-Result of the application:
-<img width="1440" alt="Screen Shot 2021-07-07 at 03 00 09" src="https://user-images.githubusercontent.com/22906687/124660145-01d17480-ded0-11eb-96cb-b01d70cd6219.png">
-
-<img width="1440" alt="Screen Shot 2021-07-07 at 03 00 03" src="https://user-images.githubusercontent.com/22906687/124660165-085fec00-ded0-11eb-90ea-2fc35a37b04a.png">
+Here is the result of the application:
+<img width="1440" alt="Screen Shot 2021-07-07 at 03 04 58" src="https://user-images.githubusercontent.com/22906687/124660270-31807c80-ded0-11eb-88c7-42a3650ed959.png">
+<img width="1440" alt="Screen Shot 2021-07-07 at 03 05 03" src="https://user-images.githubusercontent.com/22906687/124660284-37765d80-ded0-11eb-9d56-2e9b2b451592.png">
