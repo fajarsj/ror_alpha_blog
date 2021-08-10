@@ -1,0 +1,46 @@
+// override bootstrap classes
+@import "bootstrap/dist/css/bootstrap";
+
+.navbar {
+  background-color: #000;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-dark .navbar-brand {
+  color: #fff;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.home-container {
+  margin-top: 1.5625rem;
+}
+
+.home-container .jumbotron {
+  background-image: asset-url("jumbotron-bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 425px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: #dee2e6;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
