@@ -6,7 +6,7 @@ class ArticlesController < ApplicationController
 
   def index
     # @ mean convert it from this block of code variable to an instance that can be use in view
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 5)
   end
 
   def new
