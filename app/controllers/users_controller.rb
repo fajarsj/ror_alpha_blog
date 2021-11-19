@@ -32,7 +32,7 @@ class UsersController < ApplicationController
 
     if @user.update(user_params)
       flash[:noteice] = "Your account successfully updated!"
-      redirect_to articles_path
+      redirect_to @user
     else
       render 'edit'
     end

@@ -4,7 +4,10 @@
     <div class="col-8 mb-4">
       <div class="card text-center shadow bg-white rounded">
         <div class="card-header">
-          By <%= @article.user.username %>
+          <div class="mb-2">
+            By <%= link_to @article.user.username, user_path(@article.user) %>
+          </div>
+          <%= link_to gravatar_for(@article.user), user_path(@article.user) %>
         </div>
         <div class="card-body">
           <div class="card-text text-left"><%= simple_format(@article.description) %></div>
