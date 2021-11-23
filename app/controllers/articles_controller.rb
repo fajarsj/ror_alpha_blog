@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
   
   def create
     @article = Article.new(article_params)
-    @article.user = User.first
+    @article.user = current_user
     if @article.save
       flash[:notice] = "Article was created successfully"
       # @article_path(@article) is basically redirect you to @article.id, and you can shortened to @article
