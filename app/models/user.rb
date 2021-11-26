@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   before_save { self.email = email.downcase}
-  has_many :articles
+  has_many :articles, dependent: :destroy
   
   # to make const in ruby, you can just make capitalize the variable name
   # https://rubular.com/ -> to check ruby regex

@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update]
-  before_action :require_user, except: [:show, :index]
-  before_action :require_same_user, only: [:edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :require_user, except: [:show, :index, :new, :create]
+  before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def show
     @articles = @user.articles.paginate(page: params[:page], per_page: 5)
@@ -32,11 +32,18 @@ class UsersController < ApplicationController
 
   def update
     if @user.update(user_params)
-      flash[:noteice] = "Your account successfully updated!"
+      flash[:notice] = "Your account successfully updated!"
       redirect_to @user
     else
       render 'edit'
     end
+  end
+
+  def destroy
+    @user.destroy
+    session[:user_id] = nil
+    flash[:notice] = "Account successfully deleted, bye we will miss you :("
+    redirect_to login_path
   end
 
   private
@@ -49,7 +56,7 @@ class UsersController < ApplicationController
     end
 
     def require_same_user
-      if require_user != @user
+      if current_user != @user
         flash[:alert] = "You are only allowed to edit your own profile"
         redirect_to current_user
       end

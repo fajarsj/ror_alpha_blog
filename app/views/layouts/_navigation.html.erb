@@ -30,9 +30,9 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <% if logged_in? %>
-            <%= link_to 'Create new article', new_article_path, class: 'dropdown-item' %>
+            <%= link_to "Create new article", new_article_path, class: "dropdown-item" %>
           <% end %>
-          <%= link_to 'View article', articles_path, class: 'dropdown-item' %>
+          <%= link_to "View article", articles_path, class: "dropdown-item" %>
         </div>
       </li>
       <% if logged_in? %>
@@ -48,8 +48,9 @@
           <%= current_user.username %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to 'View Profile', user_path(current_user), class: 'dropdown-item' %>
-          <%= link_to 'Edit Profile', edit_user_path(current_user), class: 'dropdown-item' %>
+          <%= link_to "View Profile", user_path(current_user), class: "dropdown-item" %>
+          <%= link_to "Edit Profile", edit_user_path(current_user), class: "dropdown-item" %>
+          <%= link_to "Delete acccount", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: { confirm: "Are you sure want to delete your account ?" } %>
         </div>
       </li>
         <li class="nav-item">
